@@ -1,15 +1,28 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeapYear
+namespace Example
 {
-    internal class Program
+    public class LeapYear
     {
-        static void Main(string[] args)
+        public void year()
         {
+            Console.WriteLine("Enter the year to check wheather is Leap or not ");
+
+            int year =Convert.ToInt32 (Console.ReadLine());
+
+            if ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0))
+            {
+                Console.WriteLine(year + " is a Leap Year ");
+            }
+             else
+            {
+                Console.WriteLine(year + " is not a Leap Year ");
+            }
+            Console.ReadLine();
         }
     }
 }
